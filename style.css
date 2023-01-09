@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(120deg, #794ce2, #c159db, rgb(196, 66, 152));
+  padding: 1em;
+  min-height: 100vh;
+}
+h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5em;
+  color: rgb(236, 236, 236);
+}
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 1.5em;
+  background-color: rgb(219, 219, 219);
+  margin-top: 2em;
+  border-radius: 0.5em;
+}
+form {
+  display: flex;
+  position: relative;
+  margin-bottom: 2em;
+}
+input {
+  border: none;
+  padding: 0.3em;
+  font-size: 1.1em;
+  font-family: "Poppins", sans-serif;
+  padding-left: 0.5em;
+  height: 2em;
+  flex: 1;
+  outline: #ffa890;
+  background-color: rgba(255, 255, 255, 0.952);
+}
+.addButton {
+  height: 2em;
+  width: 2em;
+  padding: 0.3em;
+  font-size: 1.1em;
+  border: none;
+  margin: none;
+  cursor: pointer;
+}
+.addButton:hover {
+  background-color: #ffe282;
+}
+.emtyInputError {
+  display: flex;
+  position: absolute;
+  top: 38px;
+  color: rgb(168, 5, 5);
+}
+.to-do-item {
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  background-color: azure;
+  padding: 0.3em;
+  list-style: none;
+  transition: 1s ease all;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
+  margin-left: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.to-do {
+  font-family: "Poppins", sans-serif;
+  flex: 1;
+}
+
+.material-symbols-outlined:hover {
+  background-color: rgba(0, 128, 0, 0.693);
+}
+.delIcon {
+  background-color: rgb(199, 0, 0);
+}
+.delIcon:hover {
+  background-color: rgb(199, 0, 0, 0.6);
+}
+.completed {
+  opacity: 0.3;
+  background-color: rgba(255, 255, 255, 0);
+}
+.line-Through{
+    text-decoration: line-through;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+/* Filter tab */
+ .select{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+#filter {
+  width: 100%;
+  appearance: none;
+  border: none;
+  outline: none;
+  padding: 5px;
+  padding-left: 1em;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  width: 30px;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color:#c159db;
+  pointer-events: none;
+}
+.select:hover::after{
+    color:#794ce2;
+}
+option{
+    padding: 5px;
+    border: none;
+    outline: none;
+} 
