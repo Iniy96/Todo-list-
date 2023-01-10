@@ -2,7 +2,7 @@
 const inputElement = document.getElementById("name");
 const todoAddBtn = document.getElementById("todoAddBtn");
 const ulList = document.getElementsByClassName("list")[0];
-const select = document.getElementById("filter");
+const select = document.getElementById("filter-todo");
 
 //event listners
 todoAddBtn.addEventListener("click", addToDo);
@@ -34,11 +34,21 @@ function addToDo(event) {
   deleteButton.classList.add("delIcon");
   deleteButton.innerText = "delete";
 
-  //appeding the div to ul
-  ulList.appendChild(toDoItem);
+  
+
+  //appeding the li and buttons to div to ul
   toDoItem.appendChild(toDoLi);
   toDoItem.appendChild(doneButton);
   toDoItem.appendChild(deleteButton);
+
+  //verify weather this is the first elemtn insertion
+  const position = ulList.firstElementChild;
+  if(position == "null"){
+    ulList.appendChild(toDoItem);
+
+  }else{
+    ulList.insertBefore(toDoItem,position);
+  }
 }
 
 function checkMarkDelete(event) {

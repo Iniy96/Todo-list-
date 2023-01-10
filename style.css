@@ -109,7 +109,7 @@ input {
     cursor: pointer;
     overflow: hidden;
 }
-#filter {
+#filter-todo {
   width: 100%;
   appearance: none;
   border: none;
