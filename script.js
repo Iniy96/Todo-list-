@@ -3,16 +3,29 @@ const inputElement = document.getElementById("name");
 const todoAddBtn = document.getElementById("todoAddBtn");
 const ulList = document.getElementsByClassName("list")[0];
 const select = document.getElementById("filter-todo");
+const inputError =document.getElementsByClassName("emtyInputError")[0];
 
 //event listners
-todoAddBtn.addEventListener("click", addToDo);
+todoAddBtn.addEventListener("click", checkForEmptyInput);
 ulList.addEventListener("click", checkMarkDelete);
 select.addEventListener("click", filter);
+inputElement.addEventListener("click",()=>{
+  inputError.style.display ="none";
+})
 
 //functions
-function addToDo(event) {
+function checkForEmptyInput(event){
   //preventing from loading when submit button is clicked
   event.preventDefault();
+  if(inputElement.value ==""){
+    inputError.style.display ="flex";
+  }else{
+    addToDo();
+  }
+}
+
+function addToDo(event) {
+  
   //creating to-do-item div
   const toDoItem = document.createElement("div");
   toDoItem.classList.add("to-do-item");

@@ -53,7 +53,7 @@ input {
   background-color: #ffe282;
 }
 .emtyInputError {
-  display: flex;
+  display: none;
   position: absolute;
   top: 38px;
   color: rgb(168, 5, 5);
